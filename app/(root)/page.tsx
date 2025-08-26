@@ -1,7 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
 import {dummyInterviews} from "@/constants";
+
+import { Button } from "@/components/ui/button";
 import InterviewCard from "@/components/InterviewCard";
 
 const Page = () => {
@@ -33,9 +34,8 @@ const Page = () => {
 
                 <div className="interviews-section">
                     {dummyInterviews .map((interview) => (
-                        <InterviewCard  { ... interview} key={interview.id}/>
+                        <InterviewCard { ... interview}  key={interview.id}/>
                     ))}
-
                     {/*<p>You haven&apost;t taken any interviews . tet</p>*/}
                 </div>
             </section>
@@ -45,7 +45,7 @@ const Page = () => {
 
                 <div className="interviews-section">
                     {dummyInterviews .map((interview) => (
-                        <InterviewCard  { ... interview} key={interview.id}/>
+                        <InterviewCard { ... interview}  key={interview.id}/>
                     ))}
                 </div>
             </section>
