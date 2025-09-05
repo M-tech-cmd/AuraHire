@@ -6,91 +6,74 @@
     <img src="https://img.shields.io/badge/-Firebase-black?style=for-the-badge&logoColor=white&logo=firebase&color=DD2C00" alt="firebase" />
   </div>
 
-  <h3 align="center">AuraHire: A job interview preparation platform powered by Vapi AI Voice agents</h3>
-  
-# AuraHire
+  # AuraHire: A Job Interview Preparation Platform 🎙️🤖
 
-**A job interview preparation platform powered by Vapi AI Voice agents**
+AuraHire revolutionizes interview preparation by providing **AI-powered mock interviews** with **real-time voice interaction** and **instant feedback**. Practice your interview skills with intelligent voice agents that simulate real hiring scenarios.
 
-AuraHire revolutionizes interview preparation by providing AI-powered mock interviews with real-time voice interaction and instant feedback. Practice your interview skills with intelligent voice agents that simulate real hiring scenarios.
+---
 
 ## ⚙️ Tech Stack
 
-- **Next.js** - React framework for production
-- **Firebase** - Authentication and database
-- **Tailwind CSS** - Utility-first CSS framework
-- **Vapi AI** - Voice AI technology for natural conversations
-- **shadcn/ui** - Modern UI component library
-- **Google Gemini** - Advanced AI for feedback generation
-- **Zod** - TypeScript-first schema validation
+* **Next.js** – React framework for production
+* **Firebase** – Authentication and database
+* **Tailwind CSS** – Utility-first CSS framework
+* **Vapi AI** – Voice AI technology for natural conversations
+* **shadcn/ui** – Modern UI component library
+* **Google Gemini** – Advanced AI for feedback generation
+* **Zod** – TypeScript-first schema validation
+
+---
 
 ## 🔋 Features
 
-👉 **Authentication**: Sign Up and Sign In using password/email authentication handled by Firebase.
+👉 **Authentication** – Sign Up and Sign In using password/email authentication handled by Firebase.
+👉 **Create Interviews** – Generate job interviews with Vapi AI voice assistants and Google Gemini.
+👉 **AI Feedback** – Take interviews with an AI voice agent and receive instant feedback.
+👉 **Modern UI/UX** – Sleek and user-friendly interface.
+👉 **Interview Page** – Conduct AI-driven interviews with transcripts and detailed feedback.
+👉 **Dashboard** – Manage and track all your interviews.
+👉 **Responsiveness** – Fully responsive design across devices.
+👉 **Clean Code** – Reusable components and scalable architecture.
+👉 **Analytics** – Track performance and progress.
+👉 **Custom Scenarios** – Create tailored interview experiences.
+👉 **Cross-Device Sync** – Access interviews from any device.
 
-👉 **Create Interviews**: Easily generate job interviews with help of Vapi voice assistants and Google Gemini.
-
-👉 **Get feedback from AI**: Take the interview with AI voice agent, and receive instant feedback based on your conversation.
-
-👉 **Modern UI/UX**: A sleek and user-friendly interface designed for a great experience.
-
-👉 **Interview Page**: Conduct AI-driven interviews with real-time feedback and detailed transcripts.
-
-👉 **Dashboard**: Manage and track all your interviews with easy navigation.
-
-👉 **Responsiveness**: Fully responsive design that works seamlessly across devices.
-
-And many more features including:
-- Clean code architecture and reusability
-- Real-time voice interaction
-- Interview performance analytics
-- Custom interview scenarios
-- Progress tracking
-- Cross-device synchronization
+---
 
 ## 🤸 Quick Start
 
-Follow these steps to set up the project locally on your machine.
-
 ### Prerequisites
 
-Make sure you have the following installed on your machine:
+* Git
+* Node.js
+* npm (Node Package Manager)
 
-- [Git](https://git-scm.com/)
-- [Node.js](https://nodejs.org/en)
-- [npm](https://www.npmjs.com/) (Node Package Manager)
-
-### Cloning the Repository
+### Clone Repository
 
 ```bash
 git clone https://github.com/your-username/aurahire.git
 cd aurahire
 ```
 
-### Installation
-
-Install the project dependencies using npm:
+### Install Dependencies
 
 ```bash
 npm install
 ```
 
-### Set Up Environment Variables
+### Environment Variables
 
-Create a new file named `.env.local` in the root of your project and add the following content:
+Create `.env.local` in the project root:
 
 ```env
-# Vapi AI Configuration
+# Vapi AI
 NEXT_PUBLIC_VAPI_WEB_TOKEN=your_vapi_web_token_here
 NEXT_PUBLIC_VAPI_WORKFLOW_ID=your_vapi_workflow_id_here
 
-# Google Gemini API
+# Google Gemini
 GOOGLE_GENERATIVE_AI_API_KEY=your_google_ai_api_key_here
 
-# Application URL
-NEXT_PUBLIC_BASE_URL=http://localhost:3000
-
-# Firebase Client Configuration
+# Firebase Client
 NEXT_PUBLIC_FIREBASE_API_KEY=your_firebase_api_key
 NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
 NEXT_PUBLIC_FIREBASE_PROJECT_ID=your_project_id
@@ -98,95 +81,83 @@ NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your_project.appspot.com
 NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
 NEXT_PUBLIC_FIREBASE_APP_ID=your_firebase_app_id
 
-# Firebase Admin Configuration
+# Firebase Admin
 FIREBASE_PROJECT_ID=your_project_id
 FIREBASE_CLIENT_EMAIL=your_service_account_email
 FIREBASE_PRIVATE_KEY="your_private_key_here"
+
+# App URL
+NEXT_PUBLIC_BASE_URL=http://localhost:3000
 ```
 
-### Getting API Keys
-
-#### Firebase Setup
-1. Go to [Firebase Console](https://console.firebase.google.com/)
-2. Create a new project or select existing one
-3. Enable Authentication with Email/Password
-4. Create Firestore database
-5. Generate service account key for admin SDK
-6. Copy configuration values to `.env.local`
-
-#### Vapi AI Setup
-1. Sign up at [Vapi AI](https://vapi.ai/)
-2. Create a new voice agent workflow
-3. Copy your web token and workflow ID
-
-#### Google Gemini Setup
-1. Go to [Google AI Studio](https://makersuite.google.com/app/apikey)
-2. Create an API key for Gemini
-3. Add the key to your environment variables
-
-### Running the Project
+### Run the App
 
 ```bash
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
+Visit: [http://localhost:3000](http://localhost:3000)
+
+---
 
 ## 📁 Project Structure
 
 ```
 aurahire/
-├── app/                    # Next.js app directory
-│   ├── (auth)/            # Authentication pages
-│   ├── (root)/            # Protected pages
-│   └── globals.css        # Global styles
-├── components/            # Reusable components
-│   ├── ui/               # shadcn/ui components
-│   └── forms/            # Form components
-├── lib/                   # Utility functions
-│   ├── actions/          # Server actions
-│   └── utils/            # Helper functions
-├── firebase/             # Firebase configuration
-│   ├── client.ts         # Client-side config
-│   └── admin.ts          # Admin SDK config
-└── types/               # TypeScript type definitions
+├── app/             # Next.js app directory
+│   ├── (auth)/      # Authentication pages
+│   ├── (root)/      # Protected pages
+│   └── globals.css  # Global styles
+├── components/      # Reusable components
+│   ├── ui/          # shadcn/ui components
+│   └── forms/       # Form components
+├── lib/             # Utility functions
+│   ├── actions/     # Server actions
+│   └── utils/       # Helper functions
+├── firebase/        # Firebase configuration
+│   ├── client.ts    # Client-side config
+│   └── admin.ts     # Admin SDK config
+└── types/           # TypeScript types
 ```
+
+---
 
 ## 🚀 Deployment
 
-### Deploy on Vercel
-
-1. Push your code to GitHub
-2. Connect your repository to [Vercel](https://vercel.com)
-3. Add environment variables in Vercel dashboard
-4. Deploy your application
-
-### Environment Variables for Production
-
-Make sure to update `NEXT_PUBLIC_BASE_URL` to your production URL:
+* Deploy with **Vercel**
+* Add environment variables in dashboard
+* Update base URL in `.env.local`:
 
 ```env
 NEXT_PUBLIC_BASE_URL=https://your-domain.vercel.app
 ```
 
+---
+
 ## 🤝 Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
+1. Fork the repo
+2. Create a branch (`git checkout -b feature/AmazingFeature`)
+3. Commit changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙋‍♂️ Support
-
-If you have any questions or need help, please open an issue or contact the maintainers.
 
 ---
 
-**Built with ❤️ using Next.js and Vapi AI**
+## 📝 License
+
+MIT License – See LICENSE file for details.
+
+---
+
+## 🙋‍♂️ Support
+
+If you have questions, please open an issue or contact the maintainers.
+
+---
+
+Built with ❤️ using **Next.js**, **Vapi AI**, and **Google Gemini**.
+
+---
+
+📌 **[Copy](#) | [Edit](#) | [Download](#)**
